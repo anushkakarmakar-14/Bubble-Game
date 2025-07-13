@@ -6,4 +6,4 @@ HTML5
 CSS3
 Vanilla JavaScript
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blueviolet?style=for-the-badge&logo=github)](https://anushkakarmakar-14.github.io/Bubble-Game/)
+🔗 [Live Demo](https://anushkakarmakar-14.github.io/Bubble-Game/)

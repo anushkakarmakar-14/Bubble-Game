@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/*  Gradient Background */
+#main {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffb3ec, #fddde6, #cdb4f5, #d0f4de);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#panel {
+    overflow: hidden;
+    width: 80%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(255, 182, 255, 0.6);
+    border: 3px solid #fdd7ff;
+}
+
+#ptop {
+    padding: 0px 3%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #ff80cc, #c299ff);
+    border-bottom: 2px dashed #fff;
+}
+
+.elem {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.elem h2 {
+    font-weight: 600;
+    font-size: 22px;
+    color: #fffdfd;
+    text-shadow: 1px 1px 2px #b872ff;
+}
+
+h1{
+    padding-top: 10%;
+}
+
+.box {
+    color: #7a00cc;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 18px;
+    background-color: #ffe6ff;
+    border: 2px solid #cc99ff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #ffccff;
+}
+
+#difficulty {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px dashed #f3b3f3;
+    background-color: #fff0f9;
+    color: #b300b3;
+}
+
+#pbtm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+/*  Bubbles – Magical Style */
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #ffe6ff, #d5b3ff);
+    border: 0px solid #cc66ff;
+    border-radius: 50%;
+    color: #7a00cc;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 0 10px #f0b3ff;
+    transition: 0.3s;
+}
+
+.bubble:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background: radial-gradient(circle, #fcb8ff, #cc99ff);
+}
+
+.bubble.burst {
+    animation: burst 0.2s forwards;
+}
+
+@keyframes burst {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+
+/*  Buttons */
+#startBtn, #restartBtn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: linear-gradient(to right, #ff99ff, #cc66ff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px #ffb3ff;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#startBtn:hover, #restartBtn:hover {
+    background: linear-gradient(to right, #e066ff, #b84dff);
+    transform: translateY(-50%) scale(1.05);
+}
+
+#restartBtn {
+    margin-top: 20px;
+}
